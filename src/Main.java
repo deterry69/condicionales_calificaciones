@@ -3,20 +3,27 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        System.out.print("Introduce tu calificación: ");
-        double nota = sc.nextDouble();
 
-        if (nota >= 9) {
-            System.out.println("Sobresaliente");
+        System.out.print("Primer número: ");
+        double a = sc.nextDouble();
+
+        System.out.println("Operación: ");
+        String op = sc.next();
+
+        System.out.println("Segundo número: ");
+        double b = sc.nextDouble();
+
+        if (op.equals("+")) {
+            System.out.println("Resultado: " + (a + b));
         }
-        else if (nota >= 7) {
-            System.out.println("Notable");
+        else if (op.equals("-")) {
+            System.out.println("Resultado: " + (a - b));
         }
-        else if (nota >= 5) {
-            System.out.println("Sufuciente");
+        else if (op.equals("*")) {
+            System.out.println("Resultado: " + (a * b));
         }
-        else {
-            System.out.println("Insuficiente");
+        else if (op.equals("/")) {
+            System.out.println("Resultado: " + (a / b));
         }
     }
 }
