@@ -4,26 +4,19 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.print("Primer número: ");
-        double a = sc.nextDouble();
+        System.out.print("Introduce una nota (0 a 10): ");
+        double nota = sc.nextDouble();
 
-        System.out.println("Operación: ");
-        String op = sc.next();
-
-        System.out.println("Segundo número: ");
-        double b = sc.nextDouble();
-
-        if (op.equals("+")) {
-            System.out.println("Resultado: " + (a + b));
-        }
-        else if (op.equals("-")) {
-            System.out.println("Resultado: " + (a - b));
-        }
-        else if (op.equals("*")) {
-            System.out.println("Resultado: " + (a * b));
-        }
-        else if (op.equals("/")) {
-            System.out.println("Resultado: " + (a / b));
+        if (nota >= 9) {
+            System.out.println("Sobresaliente");
+        } else if (nota >= 7) {
+            System.out.println("Notable");
+        } else if (nota > 5) {
+            System.out.println("Bien");
+        } else if (nota == 5) {
+            System.out.println("Suficiente");
+        } else {
+            System.out.println("Insuficiente");
         }
     }
 }
